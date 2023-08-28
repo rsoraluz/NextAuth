@@ -1,6 +1,7 @@
 import { signIn, useSession } from "next-auth/react"
 import { useRouter } from "next/router"
 import styles from "@/styles/login.module.css"
+import Anuncio from "@/Components/Anuncio1"
 
 export default function Login(){
 
@@ -27,6 +28,9 @@ export default function Login(){
         signIn("facebook")
       
      }
+
+     Anuncio()
+
     
     
     return(
@@ -36,6 +40,10 @@ export default function Login(){
             <button className={styles.btn} onClick={ hanledClickGitHub } >Sigin with GitHub</button>
 
             <button className={styles.btn} onClick={ hanledClickFacebook } >Sigin with Facebook</button>
+
+           <div id="ltiempo_pe_side_rail_left" style={{width:"320px",height:"100px"}}>
+
+           </div>
         </div>
        
         
